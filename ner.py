@@ -22,8 +22,7 @@ import subprocess
 
 
 
-
-
+'''
 
 
 model_path = os.path.dirname(os.path.abspath(__file__))+'/model/camel'
@@ -50,7 +49,7 @@ if not os.path.exists('/root/.camel_tools/data/'):
     print( os.listdir('/root/.camel_tools/'))
     print( os.listdir('/root/'))
 
-
+'''
 ner = NERecognizer.pretrained()
 
 def test_camel(s):
