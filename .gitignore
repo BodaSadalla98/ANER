@@ -4,8 +4,8 @@ helpers/__pycache__/
 .vscode/
 venv/
 model/ours/full_model_v2.pt
-model/camel
+model/camel/*
 ner/full_model_v2.pt
 ner/test.txt
 *.pt
-model/
+
