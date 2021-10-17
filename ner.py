@@ -12,22 +12,29 @@ from helpers.helper import en_to_ar_camel
 from camel_tools.ner import NERecognizer
 import os 
 import subprocess
-# from camel_tools.data import DataCatalogue
-
-# _LABELS = ['B-LOC', 'B-ORG', 'B-PERS', 'B-MISC', 'I-LOC', 'I-ORG', 'I-PERS',I-MISC', 'O']
-
-# path = os.path.expanduser("~/.camel_tools")
-# path  = os.path.expanduser('~')+ '/ANER_DEV/model/camel/'
 
 
 
+if not os.path.exists('model/'):
+        subprocess.call( 'mkdir model/', shell=True)
+        print('============= MAKING  Model DIR ===============')
 
+
+if not os.path.exists('model/camel'):
+        subprocess.call( 'mkdir model/camel', shell=True)
+        print('============= MAKING  Camel DIR ===============')
+
+if not os.path.exists('model/ours'):
+        subprocess.call( 'mkdir model/ours', shell=True)
+        print('============= MAKING  Ours DIR ===============')
+
+
+
+# FOR Gcloud 
 '''
-
-
 model_path = os.path.dirname(os.path.abspath(__file__))+'/model/camel'
-os.environ["CAMELTOOLS_DATA"] = model_path
-copy_path =  model_path+'/data'
+    os.environ["CAMELTOOLS_DATA"] = model_path
+    copy_path =  model_path+'/data'
 
 if not os.path.exists('/root/.camel_tools/'):
         subprocess.call( 'mkdir /root/.camel_tools/', shell=True)
@@ -49,45 +56,10 @@ if not os.path.exists('/root/.camel_tools/data/'):
     print( os.listdir('/root/.camel_tools/'))
     print( os.listdir('/root/'))
 
-'''
+''' 
 ner = NERecognizer.pretrained()
 
 def test_camel(s):
-
-
-
-    # '''Just for Testing'''
-    # if not os.path.exists(path + 'data'):
-    #     os.system('export CAMELTOOLS_DATA=$path')
-    #     os.system('camel_data full')
-        
-    # path  = os.path.expanduser('~')+ '/ANER_DEV/model/camel/'
-    
-    
-
-
-    
-
-        
-        # subprocess.call(  'cp -r '+  model_path + ' ' + '/root/.camel_tools/'    , shell=True)
-
-    # print(subprocess.call('echo $CAMELTOOLS_DATA' , shell=True))
-
-    # print(model_path)
-    # print(copy_path)
-
-
-    # print( os.listdir(model_path))
-    # print( os.listdir('/root/.camel_tools/'))
-    # print( os.listdir('/root/'))
-    # print(subprocess.call(['ls', '-l', '/root/'] , shell=True))
-    # print(subprocess.call(['ls', '-l', '/root/.camel_tools/'] , shell=True))
-
-
-   
-    
- 
-
     # Predict the labels of a single sentence.
     # The sentence must be pretokenized by whitespace and punctuation.
     sentence = s.split()

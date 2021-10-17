@@ -6,6 +6,7 @@ from helpers.helper import en_to_ar
 import torch
 import os
 import gdown
+
 MODEL_NAME = 'aubmindlab/bert-base-arabertv02'
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
@@ -38,7 +39,12 @@ inv_label_map = {i: label for i, label in enumerate(label_list)}
 
 
 # model = torch.load(f'{DIR_PATH}\model\ours\\full_model_v2.pt' ,map_location='cpu')
+
+
+
 model = torch.load(destination ,map_location='cpu')
+# model = torch.load('model/ours/full' ,map_location='cpu')
+
 model.eval()
 
 def predict_sent(sentences):
