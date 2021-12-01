@@ -7,7 +7,9 @@ we deployed our model as website so that users can interact with it easily. Also
 # Install
 
 1- make a new virtual environment
+
 2- install requirements.txt via `pip install -r requirements.txt`
+
 3- run web app via `python app.py`
 
 # reduced version
