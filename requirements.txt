@@ -25,13 +25,13 @@ sacremoses==0.0.44
 six==1.15.0
 tokenizers==0.10.2
 # change here
-# torch==1.8.1+cpu
-# torchaudio==0.8.1
-# torchvision==0.9.1+cpu
+torch==1.8.1+cpu
+torchaudio==0.8.1
+torchvision==0.9.1+cpu
 ########################
-torch
-torchaudio
-torchvision
+# torch
+# torchaudio
+# torchvision
 #################
 
 
