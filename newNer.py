@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from helpers.download_model  import download_file_from_google_drive
 from transformers import AutoConfig, AutoModelForTokenClassification, AutoTokenizer, BertForTokenClassification
-from helpers.helper import en_to_ar
+from helpers.constants import en_to_ar
 import torch
 import os
 import gdown
@@ -16,7 +16,7 @@ file_id = '1Ebvc67HJQ5I9M6LfdzAiOVx5iiyVO9LN'
 
 
 
-destination =  DIR_PATH +"/model/ours/full_model_v2.pt"
+destination =  DIR_PATH +"/model/ours/model.pt"
 print(destination)
 
 

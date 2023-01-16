@@ -2,10 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect
 from ner import test_camel
 from helpers import helper
 from newNer import predict_sent
-import os 
-import subprocess
-import logging
-import shutil
+
 app = Flask(__name__)
 
 
@@ -62,9 +59,9 @@ def test():
             links = helper.get_wiki_urls(res)
             # task = helper.final_result(task)
             size = len(res)
-            return render_template('service.html', task=task, inp=inp, res=res, size=size, links=links, model="Default model")
+            return render_template('service.html', task=task, inp=inp, res=res, size=size, links=links, model="ANER Model")
     else:
-        return render_template('service.html', task='', inp='', res=[], size=0, links=[], model="Default model")
+        return render_template('service.html', task='', inp='', res=[], size=0, links=[], model="ANER Model")
 
 @app.route('/faq')
 def faq():
@@ -143,4 +140,4 @@ if __name__ == '__main__':
     # except:
     #     print('cant download camel')
         
-    app.run(debug=True)
+    app.run( host='0.0.0.0',debug=True, port =7777 )

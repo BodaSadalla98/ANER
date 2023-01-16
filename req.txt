@@ -1,0 +1,15 @@
+
+camel-tools
+emoji
+Flask
+gdown
+gunicorn
+numpy
+pandas
+PyYAML
+requests
+tokenizers
+transformers
+torch
+tqdm
+Werkzeug

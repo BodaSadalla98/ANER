@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 # from transformers import BertForTokenClassification, BertTokenizer
-from helpers.helper import en_to_ar_camel
+from helpers.constants import en_to_ar_camel
 from camel_tools.ner import NERecognizer
 import os 
 import subprocess

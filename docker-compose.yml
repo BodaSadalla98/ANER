@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  aner:
+    build:
+      context: .
+    container_name: aner
+    image: aner
+    restart: always
+    deploy:
+      resources:
+        reservations:
+          memory: 2Gb
+    ports:
+      - "7777:7777"
+    # volumes:
+      # - ./run.sh:/aner/run.sh
+      # - ./model/:/aner/model/
+      # - ./helpers:/aner/helpers
+      # - ./templates:/aner/templates
