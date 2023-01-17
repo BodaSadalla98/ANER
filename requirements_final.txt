@@ -1,0 +1,7 @@
+torch
+camel_tools
+tqdm
+transformers>=4.5.0
+Flask
+gdown
+Werkzeug
