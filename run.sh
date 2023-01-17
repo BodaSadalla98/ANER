@@ -3,14 +3,14 @@ fuser -k 7777/tcp
 
 
 
-aner_dir=/aner/model/ours
+aner_dir=$PWD/model/ours
 camel_dir=$HOME/.camel_tools
 
 
 # ## Check for our model
 # if [ ! -d "$aner_dir" ]; then
 #   echo "ANER dir does not exist. creating it now"
-#   mkdir -p /aner/model/ours
+#   mkdir -p $aner_dir
 # fi
 
 
@@ -18,7 +18,7 @@ camel_dir=$HOME/.camel_tools
 if [ -z "$(ls -A $aner_dir)" ]; then
 echo "Downloading ANER model"
 #V2 model
-https://drive.google.com/file/d/1Ebvc67HJQ5I9M6LfdzAiOVx5iiyVO9LN/view?usp=share_link -O $aner_dir/model.pt --fuzzy
+gdown https://drive.google.com/file/d/1Ebvc67HJQ5I9M6LfdzAiOVx5iiyVO9LN/view?usp=share_link -O $aner_dir/model.pt --fuzzy
 # V5 model
 # gdown https://drive.google.com/file/d/1JkL0-o3WIR1bOHTKZd38pFDOqEplb4ng/view?usp=sharing -O $aner_dir/model.pt --fuzzy
 fi
