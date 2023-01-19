@@ -29,21 +29,11 @@ if not os.path.exists(destination):
 TOKENIZER = AutoTokenizer.from_pretrained(MODEL_NAME)
 
 
-#please convert \\ or \ to / before deployment
-
-
-
 label_list = list(pd.read_csv(f'{DIR_PATH}/model/ours/label_list.txt', header=None, index_col=0).T)
 label_map = { v:index for index, v in enumerate(label_list) }
 inv_label_map = {i: label for i, label in enumerate(label_list)}
 
-
-# model = torch.load(f'{DIR_PATH}\model\ours\\full_model_v2.pt' ,map_location='cpu')
-
-
-
 model = torch.load(destination ,map_location='cpu')
-# model = torch.load('model/ours/full' ,map_location='cpu')
 
 model.eval()
 

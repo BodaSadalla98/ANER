@@ -30,33 +30,6 @@ if not os.path.exists('model/ours'):
 
 
 
-# FOR Gcloud 
-'''
-model_path = os.path.dirname(os.path.abspath(__file__))+'/model/camel'
-    os.environ["CAMELTOOLS_DATA"] = model_path
-    copy_path =  model_path+'/data'
-
-if not os.path.exists('/root/.camel_tools/'):
-        subprocess.call( 'mkdir /root/.camel_tools/', shell=True)
-        print('============= MAKING DIR ===============')
-
-
-
-if not os.path.exists('/root/.camel_tools/data/'):
-    # subprocess.call(  'sudo cp -r '+  copy_path + '/ ' + '/root/.camel_tools/'    , shell=True)
-
-    ## This is the working one 
-    subprocess.call(  'cp -r '+  copy_path + '/ ' + '/root/.camel_tools/'    , shell=True)
-
-
-    print(subprocess.call('echo $CAMELTOOLS_DATA' , shell=True))
-    print(model_path)
-    print(copy_path)
-    print( os.listdir(model_path))
-    print( os.listdir('/root/.camel_tools/'))
-    print( os.listdir('/root/'))
-
-''' 
 ner = NERecognizer.pretrained()
 
 def test_camel(s):
