@@ -5,3 +5,4 @@ transformers==4.25.0
 Flask
 gdown
 Werkzeug
+gunicorn

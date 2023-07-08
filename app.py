@@ -140,4 +140,4 @@ if __name__ == '__main__':
     # except:
     #     print('cant download camel')
         
-    app.run( host='0.0.0.0',debug=True, port =7777 )
+    app.run( host='0.0.0.0',debug=False, port=80)

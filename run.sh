@@ -32,13 +32,15 @@ if [ ! -d "$camel_dir" ]; then
     echo "Camel tools dir does not exist. creating it now"
 fi
 
-if [ -z "$(ls -A $camel_dir)" ]; then
+if [ -z "$(ls -A $camel_dir/camel_tools)" ]; then
 gdown https://drive.google.com/file/d/1k5595oEmAq7qcM6aEBQMWfQ2TiFDRExo/view?usp=share_link --fuzzy -O camel_tools.tar.xz
 tar -xvf camel_tools.tar.xz 
-mv camel_tools $camel_dir
+mv camel_tools/* $camel_dir
+
 rm camel_tools.tar.xz
 fi
 
 export CAMELTOOLS_DATA=$camel_dir
 ## Run
-python3 app.py 
+# python3 app.py 
+gunicorn -w 2 'app:app'
