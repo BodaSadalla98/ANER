@@ -15,3 +15,8 @@ we deployed our model as website so that users can interact with it easily. Also
 # reduced version
 
 There's a reduced version for this, that includes only a demo for the model, you can see it [here](https://github.com/BodaSadalla98/Arabic-NER)
+
+# Production deployment
+
+- Followed this vid [here](https://www.youtube.com/watch?v=KWIIPKbdxD0) to deploy the flask app with Gunicorn and Nginx
+-
